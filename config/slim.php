@@ -2,19 +2,18 @@
 	define('__URL_BASE','/api/v1');
 	define('__DIR_CONTROLLERS','classes/');
 	$routes = array(
-		array(
+		'cliente' => array(
 			'url' => '/cliente',
-			'type' => array('get'),
-			'controller' => 'clienteController'
+			'controller' => 'clienteController',
+			'get' => 'getCliente',
+			'post' => 'saveCliente',
 		),
-		array(
+		'reservas' => array(
 			'url' => '/reservas',
-			'type' => array('get'),
 			'controller' => 'reservasController'
 		),
-		array(
+		'reserva' => array(
 			'url' => '/reserva',
-			'type' => array('get'),
 			'controller' => 'reservaController'
 		)
 	);
