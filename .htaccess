@@ -1,4 +1,5 @@
 RewriteEngine On
-
+#Header add Access-Control-Allow-Origin "*"
+#Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
 RewriteCond %{REQUEST_URI} !\.(css|gif|ico|jpg|js|png|swf|txt|svg|eot|woff|ttf)$
 RewriteRule ^(.*)$ index.php [QSA,L]
